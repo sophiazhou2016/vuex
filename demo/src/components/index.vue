@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h1>楚玉</h1>
+    <h2>没有风知道自己的方向</h2>
+    <h2>再坚持一下，一下就好。</h2>
   </div>
 </template>
 
