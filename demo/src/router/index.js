@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/components/index'
+import vueContent from '@/components/vueContents/vueContent'
 
 Vue.use(Router)
 
@@ -17,6 +18,10 @@ export default new Router({
       children: [{
         path: '',
         component: index
+      }, {
+        path: '/vueContent',
+        name: 'vueContent',
+        component: vueContent
       }]
     }
   ]
