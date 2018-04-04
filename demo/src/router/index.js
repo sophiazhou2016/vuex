@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/components/index'
 import vueContent from '@/components/vueContents/vueContent'
+import webpackContent from '@/components/webpackContents/webpackContent'
 
 Vue.use(Router)
 
@@ -22,6 +23,10 @@ export default new Router({
         path: '/vueContent',
         name: 'vueContent',
         component: vueContent
+      }, {
+        path: '/webpackContent',
+        name: 'webpackContent',
+        component: webpackContent
       }]
     }
   ]

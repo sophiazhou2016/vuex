@@ -3,6 +3,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+console.log('config/index.js __dirname :', __dirname) // D:\zhourongjing\vuex\demo\config
 
 module.exports = {
   dev: {

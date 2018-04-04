@@ -3,6 +3,7 @@
     <h1>楚玉</h1>
     <ul class="wrap-content">
       <li @click="goVue">vue contents</li>
+      <li @click="goWebpack">webpack contents</li>
     </ul>
   </div>
 </template>
@@ -17,6 +18,9 @@ export default {
   methods: {
     goVue() {
       this.$router.push({ name: 'vueContent' })
+    },
+    goWebpack() {
+      this.$router.push({ name: 'webpackContent' })
     }
   }
 }

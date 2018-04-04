@@ -5,7 +5,7 @@ const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
 function resolve(dir) {
-  return path.join(__dirname, '..', dir)
+  return path.join(__dirname, '..', dir) // path.join()拼接路径： __dirname/。。表示上一层/dir
 }
 
 const createLintingRule = () => ({
@@ -20,13 +20,13 @@ const createLintingRule = () => ({
 })
 
 module.exports = {
-  context: path.resolve(__dirname, '../'),
+  context: path.resolve(__dirname, '../'), // __dirname：当前的绝对路径
   entry: {
-    app: './src/main.js'
+    app: './src/main.js' // 入口文件
   },
   output: {
-    path: config.build.assetsRoot,
-    filename: '[name].js',
+    path: config.build.assetsRoot, // 输出文件，config文件夹里面的index.js里面的build对象.assetsRoot
+    filename: '[name].js', // 如果有多个入口文件分开打包，可以通过[name]来命名打包的输出文件
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
@@ -36,11 +36,12 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'), // 简便路径@指向src
+      '~': resolve('src/components')
     }
   },
   module: {
     rules: [
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
+      ...(config.dev.useEslint ? [createLintingRule()] : []), // true 是否使用eslint，使用es6的解构数组返回一个object设置项
       {
         test: /\.vue$/,
         loader: 'vue-loader',
