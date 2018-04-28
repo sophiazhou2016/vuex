@@ -25,15 +25,15 @@ module.exports = {
     app: './src/main.js' // 入口文件
   },
   output: {
-    path: config.build.assetsRoot, // 输出文件，config文件夹里面的index.js里面的build对象.assetsRoot
+    path: config.build.assetsRoot, // 输出文件，config文件夹里面的index.js里面的build对象.assetsRoot-这里是dist文件夹目录
     filename: '[name].js', // 如果有多个入口文件分开打包，可以通过[name]来命名打包的输出文件
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
-    alias: {
+    extensions: ['.js', '.vue', '.json'], // 后缀是这些的可以不写
+    alias: { // 依赖
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'), // 简便路径@指向src
       '~': resolve('src/components')
@@ -91,3 +91,15 @@ module.exports = {
     child_process: 'empty'
   }
 }
+// const vuxLoader = require('vux-loader')
+
+// module.exports = vuxLoader.merge(webpackConfig, {
+//   plugins: [
+//     {
+//       name: 'vux-ui'
+//     }, {
+//       name: 'less-theme',
+//       path: 'src/styles/theme.less'
+//     }
+//   ]
+// })

@@ -14,10 +14,10 @@
     <p>loader: loader的名称（必须）</p>
     <p>include/exclude: 手动添加必须处理的文件/文件夹，或屏蔽不需要处理的文件/文件夹（可选）</p>
     <p>query: 为loaders提供额外的设置选项（可选）</p>
-    <h4>d) resolve-用来配置文件路径的指向。可以定义文件跟模块的默认路径及后缀等，节省 webpack 搜索文件的时间、优化引用模块时的体验</h4>
+    <h4>d) resolve-用来配置文件路径的指向。可以定义文件跟模块的默认路径及后缀等，节省 webpack 搜索文件的时间、优化引用模块时的体验。具体的可以参考官网的resolve说明</h4>
     <p>常用的包括alias、extensions、root、modulesDirectories属性</p>
     <p>alias： 别名。是个对象，把资源路径重定向到另一个路径。</p>
-    <p>extensions:</p>
+    <p><span class="title">extensions:</span>是个数组。['.js', '.vue', '.json'], // 后缀是这些的可以不写</p>
   </div>
 </template>
 <script>
