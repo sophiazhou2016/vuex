@@ -18,6 +18,13 @@
     <p>常用的包括alias、extensions、root、modulesDirectories属性</p>
     <p>alias： 别名。是个对象，把资源路径重定向到另一个路径。</p>
     <p><span class="title">extensions:</span>是个数组。['.js', '.vue', '.json'], // 后缀是这些的可以不写</p>
+    <h4>区分开发及生产环境</h4>
+    <p><span class="title">开发：</span>webpack.dev.conf.js</p>
+    <p><span class="title">生产：</span>webpack.prod.conf.js</p>
+    <p>webpack 还提供了 DefinePlugin 插件来设置全局环境变量，后面会根据设置的不同环境变量决定是否打包压缩，还是启动dev server 或者是 prod server</p>
+    <p>判断当前环境是否是生产环境 : process.env.NODE_ENV </p>
+    <h4>使用代码热替换</h4>
+    <p></p>
   </div>
 </template>
 <script>

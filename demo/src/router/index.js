@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import index from '@/components/index'
 import vueContent from '@/components/vueContents/vueContent'
 import webpackContent from '@/components/webpackContents/webpackContent'
+import es6 from '@/components/es6/es6'
 
 Vue.use(Router)
 
@@ -23,6 +24,10 @@ export default new Router({
         path: '/vueContent',
         name: 'vueContent',
         component: vueContent
+      }, {
+        path: '/es6',
+        name: 'es6',
+        component: es6
       }, {
         path: '/webpackContent',
         name: 'webpackContent',
