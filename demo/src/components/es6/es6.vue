@@ -116,6 +116,29 @@
       }
     </pre>
     <h4>referrer 属性可返回载入当前文档的文档的 URL。document.referrer</h4>
+    <h4>import</h4>
+    <pre>
+      // 报错
+      import { 'f' + 'oo' } from 'my_module';
+
+      // 报错
+      let module = 'my_module';
+      import { foo } from module;
+
+      // 报错
+      if (x === 1) {
+        import { foo } from 'module1';
+      } else {
+        import { foo } from 'module2';
+      }
+
+      import()可以放在if代码块，根据不同的情况，加载不同的模块。
+      if (condition) {
+        import('moduleA').then(...);
+      } else {
+        import('moduleB').then(...);
+      }
+    </pre>
   </div>
 </template>
 <script>
