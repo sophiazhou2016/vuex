@@ -5,6 +5,7 @@
       <li @click="goVue">vue contents</li>
       <li @click="goEs6">es6 contents</li>
       <li @click="goWebpack">webpack contents</li>
+      <li @click="goHtml5">html5 contents</li>
     </ul>
   </div>
 </template>
@@ -25,6 +26,9 @@ export default {
     },
     goEs6() {
       this.$router.push({ name: 'es6' })
+    },
+    goHtml5() {
+      this.$router.push({ name: 'html5' })
     }
   }
 }

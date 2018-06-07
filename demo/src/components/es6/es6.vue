@@ -118,6 +118,7 @@
     <h4>referrer 属性可返回载入当前文档的文档的 URL。document.referrer</h4>
     <h4>import</h4>
     <pre>
+      1.由于import是静态执行，所以不能使用表达式和变量，这些只有在运行时才能得到结果的语法结构。
       // 报错
       import { 'f' + 'oo' } from 'my_module';
 
@@ -131,13 +132,43 @@
       } else {
         import { foo } from 'module2';
       }
-
+    2.
       import()可以放在if代码块，根据不同的情况，加载不同的模块。
       if (condition) {
         import('moduleA').then(...);
       } else {
         import('moduleB').then(...);
       }
+    </pre>
+    <h4>export</h4>
+    <pre>
+      用法：
+        在文件config.js中：
+          export const a = 'aaa'
+          export const b = 'bbb'
+        或者：
+          const a = 'aaa'
+          const b = 'bbb'
+          export {a, b}
+
+        在另外的文件中引入：
+          import {a, b} from './config' // 变量a , b 可以直接使用
+        或者整体模块加载：
+          import * as circle from './config' // 使用方法：circle.a ; circle.b
+      注意：
+        1.export 出去的必须是接口
+          export 1 // 报错
+          var a = 1; export a; // 报错
+        2.export 重命名
+          var n = 1;
+          export {n as m}
+        3.位置的限制
+          export命令可以出现在模块的任何位置，只要处于模块顶层就可以。如果处于块级作用域内，
+          就会报错，下一节的import命令也是如此。这是因为处于条件代码块之中，就没法做静态优化了，违背了 ES6 模块的设计初衷。
+    </pre>
+    <h4>export default:默认输出一个接口</h4>
+    <pre>
+      
     </pre>
   </div>
 </template>
