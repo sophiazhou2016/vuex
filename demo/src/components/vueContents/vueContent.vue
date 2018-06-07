@@ -8,6 +8,7 @@
     <h2>需要只在安卓系统下面，引入css,import 不能写在 if 判断条件之内，但是可以用动态的写法</h2>
     <h2>动画里面的百分比参数需要从js获取，js跟scss不能交互，参考链接 <a href="https://segmentfault.com/q/1010000002561714">https://segmentfault.com/q/1010000002561714</a></h2>
     <h4>思路：百分比js获取，js设置动态的keyframes</h4>
+    <h2>斜角的进度条，实现思路：三角块绝对定位，再对其进行位移</h2>
   </div>
 </template>
 <script>
