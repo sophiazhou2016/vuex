@@ -168,7 +168,27 @@
     </pre>
     <h4>export default:默认输出一个接口</h4>
     <pre>
-      
+      1. 用法
+        // export-default.js
+        export default function () {
+          console.log('foo');
+        }
+        其他文件加载：
+        // import-default.js
+        import customName from './export-default';
+        // 可以用任意名称指向export-default.js输出的方法，这时就不需要知道原模块输出的函数名。需要注意的是，这时import命令后面，不使用大括号。
+        customName(); // 'foo'
+      2.不需要{}
+        // 第一组
+        export default function crc32() { // 输出
+          // ...
+        }
+        import crc32 from 'crc32'; // 输入
+        // 第二组
+        export function crc32() { // 输出
+          // ...
+        };
+        import {crc32} from 'crc32'; // 输入
     </pre>
   </div>
 </template>
