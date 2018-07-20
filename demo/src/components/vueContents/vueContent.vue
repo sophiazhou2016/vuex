@@ -14,6 +14,18 @@
     <h4>已经确认过网站打开慢不是因为这个js文件太大，而且vue里面的组件都是异步加载，import进来一个文件，浏览器里面会加载这个文件</h4>
     <h2>代码的技术优化：什么是Node中间层？</h2>
     <h4>tab切换保存tab各自滑动的位置（获取页面的滚动位置兼容移动端）</h4>
+    <h4>获取页面的滚动位置：</h4>
+    <pre>
+      document.documentElement.scrollTop
+      document.body.scrollTop
+      window.scrollY
+      window.pageYOffset (兼容性最好)
+    </pre>
+    <h2>一个浮窗滑动隐藏，停止滑动显示， 思路：时刻监测scrollTop，newValue跟oldValue相等即停止滑动，取消监听；否则在滑动，继续监听</h2>
+    <h2>es6，数组的map方法，() => {if() {return xxx}} 如果不满足if条件的，就会返回undefined，这个数组的length不会变化，且需要重新赋值<br/>
+      按照情况用filter方法代替
+    </h2>
+    <h2>js splice(index, 0, 'xx') 第二个参数是0的时候表示添加，是1表示替换</h2>
   </div>
 </template>
 <script>
