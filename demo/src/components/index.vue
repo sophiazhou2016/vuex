@@ -6,6 +6,7 @@
       <li @click="goEs6">es6 contents</li>
       <li @click="goWebpack">webpack contents</li>
       <li @click="goHtml5">html5 contents</li>
+      <li @click="goDesign">设计模式</li>
     </ul>
   </div>
 </template>
@@ -29,6 +30,9 @@ export default {
     },
     goHtml5() {
       this.$router.push({ name: 'html5' })
+    },
+    goDesign() {
+      this.$router.push({ name: 'design' })
     }
   }
 }

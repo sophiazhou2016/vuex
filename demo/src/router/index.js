@@ -5,6 +5,7 @@ import vueContent from '@/components/vueContents/vueContent'
 import webpackContent from '@/components/webpackContents/webpackContent'
 import html5 from '@/components/html5/html5'
 import es6 from '@/components/es6/es6'
+import design from '@/components/design/design'
 
 Vue.use(Router)
 
@@ -33,6 +34,10 @@ export default new Router({
         path: '/html5',
         name: 'html5',
         component: html5
+      }, {
+        path: '/design',
+        name: 'design',
+        component: design
       }, {
         path: '/webpackContent',
         name: 'webpackContent',

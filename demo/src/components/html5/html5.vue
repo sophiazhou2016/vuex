@@ -26,6 +26,21 @@
 
       连接结束
     </pre>
+    <h2>postMessage</h2>
+    <pre>
+      一个窗口发送消息：
+        popup.postMessage("The user is 'bob' and the password is 'secret'", "https://secure.example.net");
+      另外一个网站接受消息，添加了监听事件：
+        function receiveMessage(event)
+          {
+            // 我们能相信信息的发送者吗?  (也许这个发送者和我们最初打开的不是同一个页面).
+            if (event.origin !== "http://example.org")
+              return;
+            // event.source 是我们通过window.open打开的弹出页面 popup
+            // event.data 是 popup发送给当前页面的消息 "hi there yourself!  the secret response is: rheeeeet!"
+          }
+        window.addEventListener("message", receiveMessage, false);
+    </pre>
   </div>
 </template>
 <script>

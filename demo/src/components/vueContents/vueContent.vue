@@ -26,6 +26,24 @@
       按照情况用filter方法代替
     </h2>
     <h2>js splice(index, 0, 'xx') 第二个参数是0的时候表示添加，是1表示替换</h2>
+    <h2>过滤器</h2>
+    <pre>
+      Vue.filter('capitalize', function (value) {
+        if (!value) return ''
+        value = value.toString()
+        return value.charAt(0).toUpperCase() + value.slice(1)
+      })
+      可以写成下面这样：
+      import * as filters from './filters' // global filters; filters文件都是一个个的函数
+      // register global utility filters.
+      // Object.keys(filters) 返回一个类数组
+      Object.keys(filters).forEach(key => {
+        Vue.filter(key, filters[key])
+      })
+      ex:
+        var obj = {name: 'nick', age: 20}
+        Object.keys(obj) // ['name','age']
+    </pre>
   </div>
 </template>
 <script>
