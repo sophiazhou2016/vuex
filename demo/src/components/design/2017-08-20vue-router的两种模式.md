@@ -3,3 +3,4 @@
 ## history: onpopstate事件触发
 ## history模式生产环境需要配置ngix
   > 原理：服务端请求返回index.html，vue-router.js内部路由显示正确路由
+## history.pushState 和 history.replaceState

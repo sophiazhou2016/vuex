@@ -44,6 +44,10 @@
         var obj = {name: 'nick', age: 20}
         Object.keys(obj) // ['name','age']
     </pre>
+    <h2>获取图片的原始尺寸：naturalWidth/naturalHeight</h2>
+    <h2>Vue的data变化，但是页面不改变，addInfo不要重新赋值，用Object.assign(this.addInfo, {xxx...}) </h2>
+    <h2>git revert 回退commit/ git reset 是回退已经push的，二者还有很多其他区别</h2>
+    <h2>变量初始化,在代码最顶部申明一个初始化的Object，后面用到的时候直接调用</h2>
   </div>
 </template>
 <script>

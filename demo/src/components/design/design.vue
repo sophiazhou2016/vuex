@@ -84,7 +84,7 @@
         if(typeof input.onclick === 'function') {
           var oldClickFn = input.onclick
           oldClickFn()
-          fm()
+          fn()
         } else {
           input.onclick = fn
         }
