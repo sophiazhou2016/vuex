@@ -51,5 +51,18 @@
   </div>
 </template>
 <script>
+export default {
+  data() {
+    return {}
+  },
+  created() {
+    console.log('this.$toast:::', this.$toast)
+    this.$toast({
+      message: 'Upload Complete',
+      position: 'bottom',
+      duration: 5000
+    })
+  }
+}
 </script>
 <style src="./vueContent.scss" scoped></style>
