@@ -24,6 +24,6 @@ module.exports = {
     "function-whitespace-after": "always",
     "color-named": 'never', // 不可以使用颜色的名字
     "block-closing-brace-newline-after": "always-single-line", // 闭合括号后一空行
-    "number-leading-zero": "never" // 清楚开始的0
+    // "number-leading-zero": "never" // 清楚开始的0
   }
 };

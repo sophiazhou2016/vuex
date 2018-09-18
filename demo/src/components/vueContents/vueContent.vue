@@ -56,10 +56,15 @@ export default {
     return {}
   },
   created() {
-    console.log('this.$toast:::', this.$toast)
     this.$toast({
-      message: 'Upload Complete',
+      message: '111Upload Complete',
       position: 'bottom',
+      duration: 5000
+    })
+
+    this.$toast({
+      message: '222Upload Complete',
+      position: 'top',
       duration: 5000
     })
   }

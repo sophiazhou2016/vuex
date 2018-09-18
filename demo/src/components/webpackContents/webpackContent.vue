@@ -24,7 +24,6 @@
     <p>webpack 还提供了 DefinePlugin 插件来设置全局环境变量，后面会根据设置的不同环境变量决定是否打包压缩，还是启动dev server 或者是 prod server</p>
     <p>判断当前环境是否是生产环境 : process.env.NODE_ENV </p>
     <h4>使用代码热替换</h4>
-    <p></p>
   </div>
 </template>
 <script>

@@ -1,8 +1,9 @@
 import Vue from 'vue'
 
-const ToastConstructor = Vue.extend(require('./toast.vue'))
-console.log('ToastConstructor:', ToastConstructor)
+const ToastConstructor = Vue.extend(require('./toast.vue').default)
+
 let toastPool = []
+console.log('toastPool:::', toastPool)
 
 let getAnInstance = () => {
   if (toastPool.length > 0) {
@@ -42,7 +43,6 @@ let Toast = (options = {}) => {
   clearTimeout(instance.timer)
   instance.message = typeof options === 'string' ? options : options.message
   instance.position = options.position || 'middle'
-  console.log('instance.position:', instance.position)
   instance.className = options.className || ''
   instance.iconClass = options.iconClass || ''
 
